@@ -24,8 +24,40 @@
   text-align: center;
 }
 
+/* .education__content-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+} */
+
 .education__title {
   color: var(--color-primary);
+}
+
+.btn__view {
+  width: max-content;
+  display: flex;
+  color: var(--color-primary);
+  padding: 0 1.2rem 0;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn__view:hover {
+  background: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+}
+
+.info__icon {
+  margin-left: 0.5rem;
 }
 
 .education__subtitle {
@@ -34,6 +66,10 @@
 
 .education__calendar {
   color: var(--color-light);
+}
+
+.calendar__icon {
+  margin-right: 0.5rem;
 }
 
 .education__rounder {
@@ -50,4 +86,69 @@
   height: 100%;
   background-color: var(--color-primary);
   transform: translate(6px, -7px);
+}
+
+/* INFORMATION MODAL */
+.information__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: 10;
+  /* opacity: 0;
+  visibility: hidden; */
+  transition: .3s;
+}
+
+.information__modal-content {
+  position: relative;
+  background-color: #ebf5fa;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  width: 350px;
+}
+
+.info-description {
+  color: #413F42;
+}
+
+.information__modal-informations {
+  row-gap: 1rem;
+}
+
+.information__modal-information {
+  display: flex;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.information__modal-title {
+  margin-bottom: 2rem;
+}
+
+.information__modal-close {
+  color: #413F42;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.information__modal-close:hover {
+  color: var(--color-primary);
+}
+
+/* Active Modal */
+.active-modal {
+  opacity: 1;
+  visibility: visible;
 }
